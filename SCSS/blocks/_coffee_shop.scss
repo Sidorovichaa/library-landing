@@ -1,0 +1,117 @@
+.coffee_shop {
+    margin: 0 auto;
+}
+
+.coffee__wrapper {
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.coffee__text {
+    max-width: 1400px;
+    min-height: 120px;
+    color: $black;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 200% */
+    letter-spacing: 2px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+.menu {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+
+    @media screen and (max-width: 1005px) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.menu-right {
+    display: flex;
+    width: 482px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+
+    @media screen and (max-width: 1005px) {
+        justify-self: end;
+    }
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.item-name-l {
+    width: 199px;
+    color: $black;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.item-name-r {
+
+    color: $black;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.line {
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+}
+
+.price {
+    color: $black;
+    font-family: $font-accent;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}

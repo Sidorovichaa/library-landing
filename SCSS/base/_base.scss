@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-main;
+    background-color: $white;
+    color: $black;
+    font-size: 20px;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $white;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+        color: $accent;
+        cursor: pointer;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1450px;
+    //border: 1px solid orange;
+}
+
+.title-2 {
+    position: relative;
+    color: $dark;
+    font-family: $font-accent;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;/* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.title-2::after {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: -20px;
+    content: "";
+    height: 1px;
+    width: 50px;
+    background-color: $dark;
+}
+  
+.title-3 {
+    color: $black;
+    text-align: left;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.title-4 {
+    color: $black;
+    text-align: left;
+    font-family: $font-accent;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;/* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.title-4::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 60px;
+    background-color: $accent;
+    text-align: left;
+    //margin-bottom: 40px;
+}
+
+.title-5 {
+    color: $accent;
+    font-family: $font-accent;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;/* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.none {
+    /* Contain text within 1px box*/
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    /* Keep the layout*/
+    position: absolute;
+
+    /* Remove any visible trace (e.g. background color)*/
+    clip: rect(1px 1px 1px 1px); /*IE6, IE7*/
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+
+    /* Prevent the screen reader to skip spaces between words*/
+    white-space: nowrap;
+}
+
+.red {
+    border: 1px solid red;
+}
+

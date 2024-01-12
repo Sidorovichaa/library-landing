@@ -1,0 +1,254 @@
+.card {
+    margin: 0 auto;
+}
+
+.cards__wrapper {
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.cards__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+    flex-shrink: 1;
+    align-items: flex-start;
+
+    @media screen and (max-width: 1129px) {
+        justify-content: center;
+    }
+}
+
+.cards__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    min-height: 453px;
+}
+
+.cards__left-auth {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    min-height: 453px;
+}
+
+#reader_name_auth,
+#card_number2_auth {
+    color: $accent;
+}
+
+.profilecard__icons2 {
+    display: flex;
+    justify-content: start;
+    gap: 35px;
+}
+
+.profilecard__stats2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    color: $black;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 10px;
+    line-height: 20px;
+    /* 100% */
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-top: 15px;
+
+}
+
+.small-text2 {
+    font-family: $font-main;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+
+}
+
+
+
+
+
+.cards__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media screen and (max-width: 1129px) {
+        align-items: center;
+    }
+}
+
+.cards__form {
+    max-width: 600px;
+    max-height: 386px;
+    border: 3px solid $accent;
+    flex-shrink: 0;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper {
+    max-width: 560px;
+    max-height: 272px;
+    padding: 20px;
+    flex-shrink: 0;
+    background-color: $accent;
+}
+
+.login {
+    width: 170px;
+    display: inline-flex;
+    column-gap: 20px;
+}
+
+.login__item {
+    width: 75px;
+    height: 30px;
+    color: $dark;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    display: flex;
+    width: 75px;
+    height: 30px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid $dark;
+    transition: all 0.2s ease-in;
+
+}
+
+.login__item:hover {
+    background-color: $accent;
+    border: 1px solid $accent;
+    cursor: pointer;
+}
+
+.login__item:active {
+    background-color: #e6d3b8;
+}
+
+.card-title1 {
+    color: $black;
+    font-family: $font-main;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 30px;
+}
+
+.card-title2 {
+    color: $black;
+    text-align: center;
+    font-family: $font-accent;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 30px;
+}
+
+.form_input {
+    color: #8E8E8E;
+    font-family: $font-accent;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    /* 166.667% */
+    letter-spacing: 0.6px;
+    width: 520px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: $white;
+    padding: 8px 20px;
+    margin-bottom: 25px;
+}
+
+.cards__text {
+    color: $black;
+    text-align: right;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 200% */
+    letter-spacing: 0.4px;
+    width: 456px;
+    height: 120px;
+    margin-bottom: 35px;
+
+    @media screen and (max-width: 1129px) {
+        text-align: center;
+        width: 600px;
+        height: auto;
+    }
+}
+
+.form_submit {
+    color: $dark;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    padding: 10px 40px;
+    border-radius: 2px;
+    border: 1px solid $dark;
+    transition: all 0.2s ease-in;
+}
+
+.form_submit:hover {
+    background-color: $accent;
+    border: 1px solid $accent;
+    cursor: pointer;
+}
+
+.form_submit:active {
+    background-color: #e6d3b8;
+}
+
+.form-name {
+    color: $black;
+    font-family: $font-accent;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    margin-bottom: 20px;
+}

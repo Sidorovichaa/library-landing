@@ -1,0 +1,232 @@
+.header {
+  background: #0C0C0E;
+}
+
+.header__top {
+  padding: 20px;
+  height: 90px;
+  background: #0C0C0E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav--mobile {
+  position: fixed;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+  width: 332px;
+  //width: 100%;
+  height: 570px;
+  //height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 30px;
+  padding-right: 10px;
+
+  .nav__list {
+    height: 370px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    text-align: center;
+    align-self: flex-end;
+    color: #FFF;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    /* 250% */
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header__icons {
+    align-self: flex-end;
+    column-gap: 40px;
+    margin-bottom: 41px;
+  }
+}
+
+.logo {
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 30px;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.header__icons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  padding-left: 40px;
+}
+
+.header__nav-btn {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.welcome {
+  height: 600px;
+  background: url("../img/welcome/welcome-bg.jpg"), lightgray 50%/cover no-repeat;
+}
+
+.welcome__overlay {
+  height: 300px;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%);
+}
+
+.welcome__title {
+  position: absolute;
+  top: 310px;
+  display: flex;
+  width: 600px;
+  height: 220px;
+  padding: 35px 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  background: $dark;
+}
+
+
+/* Nav Icon */
+.nav-icon-btn {
+	--time: 0.1s;
+	--width: 40px;
+	--height: 30px;
+	--line-height: 1px;
+    --line-margin: 2;
+	--color: #fff;
+
+	height: var(--height);
+	width: var(--width);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-icon {
+	position: relative;
+	width: var(--width);
+	height: var(--line-height);
+	background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+	content: '';
+	display: block;
+
+	position: absolute;
+	left: 0;
+
+	width: var(--width);
+	height: var(--line-height);
+
+	background-color: var(--color);
+	transition: transform var(--time) ease-in,
+		top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+	top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+	top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+	background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+	top: 0;
+	transition: top var(--time) linear,
+		transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+	transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+	transform: rotate(-45deg);
+}
+
+// Header icons with and without authentification
+.header__icon {
+  cursor: pointer;
+  fill: $white;
+  transition: fill 0.6s ease-in;
+}
+
+.header__icon:hover {
+  fill: $accent;
+  transition: fill 0.6s ease-in;
+}
+
+.header__icon-auth {
+  display: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: $accent;
+  background-color: $white;
+  font-size: 15px;
+  border-radius: 28px;
+  padding: 5px 4px;
+  transition: all 0.6s ease-in;
+
+}
+
+.header__icon-auth:hover {
+  color: $accent;
+  transition: all 0.6s ease-in;
+}
+
+

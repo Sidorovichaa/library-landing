@@ -1,0 +1,101 @@
+// @media screen and (max-width: 900px) {
+//   .slider img{
+//     width: calc(100% / 2);
+//   }
+// }
+// @media screen and (max-width: 550px) {
+//   .slider img{
+//     width: 100%;
+//   }
+// }
+
+.slider-wrapper {
+  width: 100%;
+  margin: 10px auto;
+
+  @media screen and (max-width: 1439px) {
+    width: 925px;
+ }
+  @media screen and (max-width: 1024px) {
+    width: 450px;
+ }
+}
+
+.carousel {
+  height: 660px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  height: 100%;
+  display: flex;
+  column-gap: 25px;
+  transition: all 0.7s ease-out;
+}
+
+.slider img {
+  flex-basis: 100%;
+  max-height: 560px;
+}
+
+.pagination .arrow {
+  position: absolute;
+  top: 57%;
+  cursor: pointer;
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+ }
+}
+
+.arrow.left {
+  left: 90px;
+  
+}
+
+.arrow.right {
+  right: 90px;
+  }
+
+.pagination ul {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.pagination ul li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $dark;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pagination ul li.btn-mobile1 {
+  display: none;
+
+   @media screen and (max-width: 1439px) {
+     display: flex;
+  }
+}
+
+ 
+.pagination ul li.btn-mobile2 {
+   display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+   }
+}
+  
+.pagination ul li.btn-active {
+  background-color: $accent;
+}

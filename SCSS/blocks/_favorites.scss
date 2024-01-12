@@ -1,0 +1,266 @@
+.hidden {
+    display: none;
+}
+
+.favorites {
+    margin: 0 auto;
+}
+
+.favorites__wrapper {
+    //max-width: 1440px;
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites_header {
+    color: $black;
+    text-align: left;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.radio--checked {
+    font-weight: 700;
+}
+
+.favorites-radio-form {
+    align-self: flex-start;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.season-wrapper {
+    position: sticky;
+    top: 65px;
+    padding-top: 40px;
+    display: flex;
+    gap: 94px;
+    color: $dark;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 400;
+
+    @media screen and (max-width: 1024Px) {
+        gap: 90px;
+    }
+}
+
+.season-choice input {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.season-choice input::before {
+    top: 4px;
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid $dark;
+}
+
+.season-choice input:checked::after {
+    position: absolute;
+    content: '';
+    top: 73%;
+    left: 53%;
+    transform: translate(-58%, -44%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $dark;
+}
+
+.season-choice input:checked+label {
+    font-weight: 700;
+}
+
+.season-wrapper input {
+    margin-right: 12px;
+}
+
+.season-wrapper input+label {
+    cursor: pointer;
+}
+
+.favorites-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites-form p {
+    color: $dark;
+    font-family: $font-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.book-wrapper {
+    position: relative;
+}
+
+.card {
+    transition: all 2s;
+}
+
+[data-tab-content] {
+    transition: all 5s;
+}
+
+#tab-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-right: 35px;
+    //transition: all 5s;
+    
+    @media screen and (max-width: 1220px) {
+        column-gap: 60px;
+        justify-content: center;
+    }
+}
+
+#tab-2,
+#tab-3,
+#tab-4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-right: 35px;
+    //position: absolute;
+    //top: 0px;
+    opacity: 0;
+    transition: opacity 3s, display 3s;
+        
+    @media screen and (max-width: 1220px) {
+        column-gap: 60px;
+        justify-content: center;
+    }
+}
+
+// .display-on-check {
+//     opacity: 0;
+//     display: none;
+//     transition: opacity 0.5s, display 0.5s;
+// }
+
+
+.book {
+    display: block;
+    border: 1px solid $black;
+    padding: 15px 20px;
+    width: 550px;
+    height: 555px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.book-img {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    height: 300px;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.book_cap {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.book-title {
+    color: $black;
+    font-family: $font-main;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    /* 266.667% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.book-author {
+    color: $black;
+    font-family: $font-main;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.book-description {
+    width: 355px;
+    color: $black;
+    font-family: $font-main;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 266.667% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.buy_book {
+    width: 75px;
+    height: 30px;
+    border: 1px solid $black;
+    flex-shrink: 0;
+    color: $black;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.buy_book:hover {
+    background-color: $accent;
+    border: 1px solid $accent;
+    cursor: pointer;
+}
+
+.buy_book:active {
+    background-color: #e6d3b8;
+}
+
+.own {
+    width: 75px;
+    height: 30px;
+    color: $accent;
+    border: 1px solid $accent;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+}
